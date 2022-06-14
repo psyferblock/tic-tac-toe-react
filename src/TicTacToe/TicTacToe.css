@@ -2,8 +2,15 @@ table td{
     border: 1px solid red;
     width:150px;
     height:150px;
+    /* align-items: center; */
+
 }
 .container{
     display: flex;
     justify-content: center;
+}
+td{
+    /* display: flex; */
+align-items: center;
+justify-content:center;
 }
