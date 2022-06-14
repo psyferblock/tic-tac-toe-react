@@ -1,0 +1,9 @@
+table td{
+    border: 1px solid red;
+    width:150px;
+    height:150px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
