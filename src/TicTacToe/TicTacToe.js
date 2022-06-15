@@ -35,7 +35,7 @@ const TicTacToe = () => {
                     if (
                         squares[pattern[0]===squares[pattern[1]]] &&
                         squares[pattern[1]===squares[pattern[2]]] 
-                    ){
+                    ) {
                         setWinner(squares[pattern[0]])
                     }
                 }
@@ -61,11 +61,14 @@ const TicTacToe = () => {
         checkForWinner(squares)
     }
     const Cell=({num})=>{
-        return <td 
-        onClick={()=>
-        handleClick(num)}>
-           { cells[num]}
+        return <td  onClick={()=> handleClick(num)}>
+           {cells[num]}
             </td>
+    }
+    const handleRestart=()=>{
+        setWinner(null);
+        setCells(Array(9).fill('') )
+
     }
   return (
     <div className='container'>
@@ -91,7 +94,7 @@ const TicTacToe = () => {
         </table>
         {winner &&(
             <>
-                {/* <p> {winner} is the winner. yay!</p> */}
+                <p> {winner} is the winner. yay!</p>
                 <button onClick={(()=>handleRestart())}>Play again</button>
             </>
         )}
